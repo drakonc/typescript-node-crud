@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf ./dist",
-    "dev": "nodemon src/index.ts --exec ts-node"
+    "dev": "ts-node src/index.ts"
   },
   "repository": {
     "type": "git",
