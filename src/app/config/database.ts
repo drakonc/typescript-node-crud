@@ -1,15 +1,16 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 async function connect() {
-  try {
-    await mongoose.connect("mongodb://localhost/ts-app-tutorial", {
-      useNewUrlParser: true,
-      useUnifiedTopology: true
-    });
-    console.log(">>> Database Connected");
-  } catch {
-    console.log("Error al Conerctar a la base de Datos");
-  }
+	try {
+		const url_connection = 'mongodb://jcastro:' + encodeURIComponent('Passw0rd!!') + '@localhost:27017/ts-app-tutorial?authSource=admin';
+		await mongoose.connect(url_connection, {
+			useNewUrlParser: true,
+			useUnifiedTopology: true
+		});
+		console.log('>>> Database Connected');
+	} catch (error) {
+		console.log(error);
+	}
 }
 
 export default connect;
