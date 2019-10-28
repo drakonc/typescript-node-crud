@@ -1,0 +1,21 @@
+<div class="row mb-5">
+    <div class="col-md-4 offset-md-4">
+        <h1 class="font-weight-bold font-italic text-uppercase">Listado de Tareas </h1>
+    </div>
+</div>
+<div class="row">
+    {{#each tasks}}
+    <div class="col col-md-3">
+        <div class="card rounded mb-3">
+            <div class="card-body">
+                <h3 class="font-weight-bold font-italic text-uppercase">{{ titulo }}</h3>
+                <p>{{ descripcion }}</p>
+            </div>
+            <div class="card-footer d-flex justify-content-between aling-items-center">
+                <a href="/tasks/delete" class="btn btn-danger">Eliminar</a>
+                <a href="/tasks/edit" class="btn btn-secondary">Editar</a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
