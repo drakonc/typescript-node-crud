@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <div class="card rounded border-primary">
+            <div class="card-header text-center text-white bg-primary">
+                <h2 class="font-weight-bold font-italic text-uppercase">Editando Tarea</h2>
+            </div>
+            <div class="card-body">
+                <form action="/tasks/edit/{{task._id}}" method="POST">
+                    <div class="form-group">
+                        <label for="titulo" class="font-weight-bold">Tarea</label>
+                        <input type="text" id="titulo" name="titulo" placeholder="Escribe tu Titulo"
+                            class="form-control rounded" value="{{task.titulo}}" autofocus required>
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcion" class="font-weight-bold">Descripción</label>
+                        <input type="text" id="descripcion" name="descripcion" placeholder="Escribe tu Descripción"
+                            class="form-control rounded" value="{{task.descripcion}}">
+                    </div>
+                    <button type="submit" class="btn btn-success btn-block">
+                        Guargar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
